@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { colors } from "@/lib/colors";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
@@ -16,12 +17,12 @@ export function ShieldLogo(props: IconProps) {
     <svg viewBox="0 0 48 48" fill="none" {...props}>
       <path
         d="M24 3 7 9v12c0 11 7.4 18.6 17 24 9.6-5.4 17-13 17-24V9L24 3Z"
-        fill="#1B2A4A"
-        stroke="#B8922A"
+        fill={colors.navy}
+        stroke={colors.gold}
         strokeWidth="2"
       />
-      <path d="M24 14v20M16 24h16" stroke="#B8922A" strokeWidth="2.2" strokeLinecap="round" />
-      <circle cx="24" cy="24" r="6.5" stroke="#FDF6E3" strokeWidth="1.5" />
+      <path d="M24 14v20M16 24h16" stroke={colors.gold} strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="24" cy="24" r="6.5" stroke={colors.goldLight} strokeWidth="1.5" />
     </svg>
   );
 }

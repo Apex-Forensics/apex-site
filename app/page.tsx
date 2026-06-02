@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
+import { colors } from "@/lib/colors";
 import {
   StoreIcon,
   BankIcon,
@@ -24,28 +25,28 @@ const whoWeServe = [
     title: "SMEs",
     desc: "Protect your business from financial leaks and fraud.",
     href: "/who-we-serve/smes",
-    color: "#B8922A",
+    color: colors.gold,
   },
   {
     icon: BankIcon,
     title: "Institutions",
     desc: "Strengthen controls and ensure financial integrity.",
     href: "/who-we-serve/institutions",
-    color: "#1B2A4A",
+    color: colors.navy,
   },
   {
     icon: PeopleIcon,
     title: "Organizations",
     desc: "Ensure transparency, accountability and impact.",
     href: "/who-we-serve/organizations",
-    color: "#B8922A",
+    color: colors.gold,
   },
   {
     icon: GovernmentIcon,
     title: "Government",
     desc: "Support public sector integrity and anti-corruption efforts.",
     href: "/who-we-serve/government",
-    color: "#1B2A4A",
+    color: colors.navy,
   },
 ];
 
@@ -110,7 +111,7 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section
         style={{
-          background: "#1B2A4A",
+          background: colors.navy,
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -133,7 +134,7 @@ export default function HomePage() {
         <div style={{
   position: "absolute",
   inset: 0,
-  background: "linear-gradient(to right, #1B2A4A 20%, rgba(27,42,74,0.11) 100%)",
+  background: `linear-gradient(to right, ${colors.navy} 20%, rgba(27,42,74,0.11) 100%)`,
   zIndex: 1,
 }}
         />
@@ -152,7 +153,7 @@ export default function HomePage() {
           <div className="animate-fade-left">
             <p
               style={{
-                color: "#B8922A",
+                color: colors.gold,
                 fontWeight: "bold",
                 fontSize: "12px",
                 letterSpacing: "0.12em",
@@ -180,7 +181,7 @@ export default function HomePage() {
 
             <p
               style={{
-                color: "#B8922A",
+                color: colors.gold,
                 fontSize: "16px",
                 lineHeight: 1.8,
                 marginBottom: "2.5rem",
@@ -196,7 +197,7 @@ export default function HomePage() {
                 href="/consultation"
                 className="btn-hover"
                 style={{
-                  background: "#B8922A",
+                  background: colors.gold,
                   color: "white",
                   padding: "14px 28px",
                   borderRadius: "4px",
@@ -260,7 +261,7 @@ export default function HomePage() {
               style={{
                 width: "60px",
                 height: "3px",
-                background: "#B8922A",
+                background: colors.gold,
                 margin: "0 auto",
               }}
             />
@@ -280,8 +281,8 @@ export default function HomePage() {
                   <div
                     className="card-hover"
                     style={{
-                      background: "#F9F9F9",
-                      border: "1px solid #EEEEEE",
+                      background: colors.offWhite,
+                      border: `1px solid ${colors.border}`,
                       borderRadius: "8px",
                       padding: "2rem",
                       textAlign: "center",
@@ -293,7 +294,7 @@ export default function HomePage() {
                         height: "56px",
                         borderRadius: "50%",
                         background:
-                          item.color === "#B8922A" ? "#FDF6E3" : "#EEF2F7",
+                          item.color === colors.gold ? colors.goldLight : colors.blueLight,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -307,7 +308,7 @@ export default function HomePage() {
                     </h3>
                     <p
                       style={{
-                        color: "#555",
+                        color: colors.grey,
                         fontSize: "14px",
                         lineHeight: 1.6,
                         marginBottom: "1rem",
@@ -338,7 +339,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WHAT WE DO ── */}
-      <section className="section-padding" style={{ background: "#F5F5F5" }}>
+      <section className="section-padding" style={{ background: colors.soft }}>
         <div className="container-apex">
           <Reveal style={{ textAlign: "center", marginBottom: "3rem" }}>
             <h2
@@ -354,7 +355,7 @@ export default function HomePage() {
               style={{
                 width: "60px",
                 height: "3px",
-                background: "#B8922A",
+                background: colors.gold,
                 margin: "0 auto",
               }}
             />
@@ -387,20 +388,20 @@ export default function HomePage() {
                         width: "56px",
                         height: "56px",
                         borderRadius: "50%",
-                        background: "#EEF2F7",
+                        background: colors.blueLight,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         margin: "0 auto 1rem",
                       }}
                     >
-                      <Icon width={28} height={28} color="#1B2A4A" />
+                      <Icon width={28} height={28} color={colors.navy} />
                     </div>
                     <h3 style={{ fontSize: "16px", marginBottom: "0.75rem" }}>
                       {item.title}
                     </h3>
                     <p
-                      style={{ color: "#555", fontSize: "13px", lineHeight: 1.6 }}
+                      style={{ color: colors.grey, fontSize: "13px", lineHeight: 1.6 }}
                     >
                       {item.desc}
                     </p>
@@ -415,7 +416,7 @@ export default function HomePage() {
               href="/services"
               className="btn-hover"
               style={{
-                background: "#1B2A4A",
+                background: colors.navy,
                 color: "white",
                 padding: "12px 32px",
                 borderRadius: "4px",
@@ -434,7 +435,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED RESOURCES ── */}
-      <section className="section-padding" style={{ background: "#1B2A4A" }}>
+      <section className="section-padding" style={{ background: colors.navy }}>
         <div className="container-apex">
           <Reveal style={{ textAlign: "center", marginBottom: "3rem" }}>
             <h2
@@ -447,7 +448,7 @@ export default function HomePage() {
             >
               FEATURED RESOURCES
             </h2>
-            <p style={{ color: "#B8922A", fontSize: "14px" }}>
+            <p style={{ color: colors.gold, fontSize: "14px" }}>
               Practical tools and guides to help you protect your business.
             </p>
           </Reveal>
@@ -477,7 +478,7 @@ export default function HomePage() {
                     style={{
                       width: "52px",
                       height: "52px",
-                      background: "#FDF6E3",
+                      background: colors.goldLight,
                       borderRadius: "8px",
                       display: "flex",
                       alignItems: "center",
@@ -485,21 +486,21 @@ export default function HomePage() {
                       flexShrink: 0,
                     }}
                   >
-                    <DownloadIcon width={24} height={24} color="#B8922A" />
+                    <DownloadIcon width={24} height={24} color={colors.gold} />
                   </div>
                   <div>
                     <h3
                       style={{
                         fontSize: "15px",
                         marginBottom: "0.5rem",
-                        color: "#1B2A4A",
+                        color: colors.navy,
                       }}
                     >
                       {res.title}
                     </h3>
                     <p
                       style={{
-                        color: "#555",
+                        color: colors.grey,
                         fontSize: "13px",
                         lineHeight: 1.5,
                         marginBottom: "1rem",
@@ -510,11 +511,11 @@ export default function HomePage() {
                     <Link
                       href={res.href}
                       style={{
-                        color: "#1B2A4A",
+                        color: colors.navy,
                         textDecoration: "none",
                         fontWeight: "bold",
                         fontSize: "13px",
-                        border: "1px solid #1B2A4A",
+                        border: `1px solid ${colors.navy}`,
                         padding: "6px 14px",
                         borderRadius: "4px",
                         display: "inline-flex",
@@ -534,7 +535,7 @@ export default function HomePage() {
             <Link
               href="/resource-hub"
               style={{
-                background: "#B8922A",
+                background: colors.gold,
                 color: "white",
                 padding: "12px 32px",
                 borderRadius: "4px",
@@ -554,7 +555,7 @@ export default function HomePage() {
         style={{
           background: "white",
           padding: "3rem 0",
-          borderBottom: "1px solid #EEEEEE",
+          borderBottom: `1px solid ${colors.border}`,
         }}
       >
         <div className="container-apex">
@@ -576,20 +577,20 @@ export default function HomePage() {
                         width: "48px",
                         height: "48px",
                         borderRadius: "50%",
-                        background: "#FDF6E3",
+                        background: colors.goldLight,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         margin: "0 auto 0.75rem",
                       }}
                     >
-                      <Icon width={24} height={24} color="#B8922A" />
+                      <Icon width={24} height={24} color={colors.gold} />
                     </div>
                     <div
                       style={{
                         fontSize: "2.2rem",
                         fontWeight: "bold",
-                        color: "#B8922A",
+                        color: colors.gold,
                         lineHeight: 1,
                       }}
                     >
@@ -597,7 +598,7 @@ export default function HomePage() {
                     </div>
                     <div
                       style={{
-                        color: "#555",
+                        color: colors.grey,
                         fontSize: "13px",
                         marginTop: "0.5rem",
                         lineHeight: 1.4,
@@ -614,7 +615,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section style={{ background: "#1B2A4A", padding: "3.5rem 0" }}>
+      <section style={{ background: colors.navy, padding: "3.5rem 0" }}>
         <div
           className="container-apex"
           style={{
@@ -638,7 +639,7 @@ export default function HomePage() {
                 flexShrink: 0,
               }}
             >
-              <CalendarIcon width={28} height={28} color="#B8922A" />
+              <CalendarIcon width={28} height={28} color={colors.gold} />
             </div>
             <div>
               <h3
@@ -650,7 +651,7 @@ export default function HomePage() {
               >
                 Not sure if your business is at risk?
               </h3>
-              <p style={{ color: "#a0aec0", fontSize: "14px" }}>
+              <p style={{ color: colors.muted, fontSize: "14px" }}>
                 Let our experts help you identify risks and protect what
                 matters.
               </p>
@@ -661,7 +662,7 @@ export default function HomePage() {
             href="/consultation"
             className="btn-hover"
             style={{
-              background: "#B8922A",
+              background: colors.gold,
               color: "white",
               padding: "14px 28px",
               borderRadius: "4px",

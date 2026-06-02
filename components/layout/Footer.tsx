@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { colors } from "@/lib/colors";
 import {
   PinIcon,
   PhoneIcon,
@@ -50,7 +51,7 @@ const contactDetails = [
 export default function Footer() {
   return (
     <footer>
-      <div style={{ background: "#1B2A4A", color: "white", padding: "4rem 0 2rem" }}>
+      <div style={{ background: colors.navy, color: "white", padding: "4rem 0 2rem" }}>
         <div className="container-apex">
           <div style={{
             display: "grid",
@@ -64,16 +65,16 @@ export default function Footer() {
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>
                 <div style={{
                   width: "40px", height: "40px", borderRadius: "50%",
-                  background: "#B8922A", display: "flex", alignItems: "center",
+                  background: colors.gold, display: "flex", alignItems: "center",
                   justifyContent: "center", fontWeight: "bold", color: "white", fontSize: "16px",
                 }}>A</div>
                 <div>
                   <div style={{ color: "white", fontWeight: "bold", fontSize: "13px" }}>APEX FORENSIC</div>
-                  <div style={{ color: "#B8922A", fontSize: "10px" }}>& FINANCIAL INVESTIGATIONS</div>
+                  <div style={{ color: colors.gold, fontSize: "10px" }}>& FINANCIAL INVESTIGATIONS</div>
                 </div>
               </div>
 
-              <p style={{ color: "#a0aec0", fontSize: "13px", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+              <p style={{ color: colors.muted, fontSize: "13px", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                 Enhancing integrity, protecting value and building trust through professional forensic and financial investigation services.
               </p>
 
@@ -129,8 +130,8 @@ export default function Footer() {
               <h4 style={colHeader}>Contact Us</h4>
               {contactDetails.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", marginBottom: "10px" }}>
-                  <span style={{ color: "#B8922A", marginTop: "2px", flexShrink: 0 }}>{item.icon}</span>
-                  <span style={{ color: "#a0aec0", fontSize: "13px", lineHeight: 1.5 }}>{item.text}</span>
+                  <span style={{ color: colors.gold, marginTop: "2px", flexShrink: 0 }}>{item.icon}</span>
+                  <span style={{ color: colors.muted, fontSize: "13px", lineHeight: 1.5 }}>{item.text}</span>
                 </div>
               ))}
 
@@ -140,7 +141,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 style={{
                   display: "inline-flex", alignItems: "center", gap: "8px",
-                  marginTop: "1rem", background: "#25D366", color: "white",
+                  marginTop: "1rem", background: colors.whatsapp, color: "white",
                   padding: "8px 16px", borderRadius: "4px",
                   textDecoration: "none", fontSize: "13px", fontWeight: "bold",
                 }}
@@ -161,12 +162,12 @@ export default function Footer() {
             flexWrap: "wrap",
             gap: "1rem",
           }}>
-            <p style={{ color: "#a0aec0", fontSize: "12px" }}>
+            <p style={{ color: colors.muted, fontSize: "12px" }}>
               © 2026 Apex Forensic & Financial Investigations Ltd. All Rights Reserved.
             </p>
             <div style={{ display: "flex", gap: "1.5rem" }}>
-              <Link href="/privacy-policy" style={{ color: "#a0aec0", fontSize: "12px", textDecoration: "none" }}>Privacy Policy</Link>
-              <Link href="/terms-of-service" style={{ color: "#a0aec0", fontSize: "12px", textDecoration: "none" }}>Terms of Service</Link>
+              <Link href="/privacy-policy" style={{ color: colors.muted, fontSize: "12px", textDecoration: "none" }}>Privacy Policy</Link>
+              <Link href="/terms-of-service" style={{ color: colors.muted, fontSize: "12px", textDecoration: "none" }}>Terms of Service</Link>
             </div>
           </div>
         </div>
@@ -182,7 +183,7 @@ export default function Footer() {
         style={{
           position: "fixed", bottom: "24px", right: "24px",
           width: "56px", height: "56px", borderRadius: "50%",
-          background: "#25D366", color: "white",
+          background: colors.whatsapp, color: "white",
           display: "flex", alignItems: "center", justifyContent: "center",
           textDecoration: "none",
           boxShadow: "0 4px 16px rgba(0,0,0,0.2)", zIndex: 999,
@@ -200,6 +201,6 @@ const colHeader: React.CSSProperties = {
 };
 
 const footerLink: React.CSSProperties = {
-  display: "block", color: "#a0aec0", textDecoration: "none",
+  display: "block", color: colors.muted, textDecoration: "none",
   fontSize: "13px", marginBottom: "8px",
 };

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 /* ── Apex Brand Tokens ── */
+/* Keep these in sync with `lib/colors.ts` (the JS/TSX source of truth). */
 @theme inline {
   --color-apex-navy: #1B2A4A;
   --color-apex-navy-dark: #111d33;
@@ -10,7 +11,13 @@
   --color-apex-blue-light: #EEF2F7;
   --color-apex-soft: #F5F5F5;
   --color-apex-grey: #555555;
+  --color-apex-grey-dark: #444444;
   --color-apex-dark: #1A1A1A;
+  --color-apex-off-white: #F9F9F9;
+  --color-apex-border: #EEEEEE;
+  --color-apex-border-light: #f0f0f0;
+  --color-apex-muted: #a0aec0;
+  --color-apex-whatsapp: #25D366;
   --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
