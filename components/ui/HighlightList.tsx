@@ -14,7 +14,7 @@ export default function HighlightList({ items }: { items: string[] }) {
         marginBottom: "1.5rem",
         color: colors.navy,
         paddingBottom: "0.75rem",
-        borderBottom: "2px solid #B8922A",
+        borderBottom: `2px solid ${colors.gold}`,
       }}>
         What We Cover
       </h3>

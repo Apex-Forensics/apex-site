@@ -15,7 +15,7 @@ export default function FinancialIntelligencePage() {
       title="Financial Intelligence"
       intro="Turning complex financial data into clear, actionable intelligence that informs critical business and legal decisions."
       icon={ChartIcon}
-      whatItIs="Financial intelligence is the collection, analysis, and interpretation of financial information to support decision-making, legal proceedings, and risk management. At Apex, we trace assets, analyse financial flows, and produce intelligence reports that give clients a clear picture of where money has moved, who controls it, and what risks exist — enabling informed action."
+      whatItIs="Financial intelligence is the collection, analysis, and interpretation of financial information to support decision-making, legal proceedings, and risk management. At Apex, we trace assets, analyse financial flows, and produce intelligence reports that give clients a clear picture of where money has moved, who controls it, and what risks exist, enabling informed action."
       whoItIsFor={[
         "Businesses pursuing asset recovery",
         "Legal teams requiring financial intelligence for litigation",
@@ -64,7 +64,7 @@ export default function FinancialIntelligencePage() {
           desc: "We walk the client through findings and advise on next steps.",
         },
       ]}
-      whyApex="Financial intelligence requires both analytical depth and investigative creativity. At Apex, we combine forensic accounting skills with intelligence techniques to follow the money wherever it leads. We understand the complexity of financial structures in Ghana and across Africa, and we deliver intelligence that is accurate, timely, and actionable — giving our clients the advantage they need."
+      whyApex="Financial intelligence requires both analytical depth and investigative creativity. At Apex, we combine forensic accounting skills with intelligence techniques to follow the money wherever it leads. We understand the complexity of financial structures in Ghana and across Africa, and we deliver intelligence that is accurate, timely, and actionable, giving our clients the advantage they need."
     />
   );
 }

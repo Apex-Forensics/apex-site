@@ -15,7 +15,7 @@ export default function InstitutionsPage() {
       title="Financial Institutions"
       subtitle="Strengthening controls, ensuring financial integrity, and supporting regulatory compliance for Ghana's financial institutions."
       icon={BankIcon}
-      intro="Financial institutions operate under intense regulatory scrutiny and face significant fraud risk from both internal and external sources. Apex provides independent forensic and financial investigation services that help banks, microfinance institutions, insurance companies, and savings and loans organisations detect misconduct, strengthen controls, and demonstrate compliance — while protecting their reputation and their clients."
+      intro="Financial institutions operate under intense regulatory scrutiny and face significant fraud risk from both internal and external sources. Apex provides independent forensic and financial investigation services that help banks, microfinance institutions, insurance companies, and savings and loans organisations detect misconduct, strengthen controls, and demonstrate compliance, while protecting their reputation and their clients."
       challenges={[
         "Internal staff fraud and misconduct at all levels",
         "Complex financial fraud schemes targeting institutional accounts",

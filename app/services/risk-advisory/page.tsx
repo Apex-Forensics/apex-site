@@ -15,7 +15,7 @@ export default function RiskAdvisoryPage() {
       title="Risk Advisory"
       intro="Helping businesses identify, assess, and mitigate financial and operational risks before they become crises."
       icon={ShieldLogo}
-      whatItIs="Risk advisory is the process of identifying, evaluating, and recommending measures to manage financial, operational, and compliance risks within an organisation. At Apex, we work with clients to understand their risk exposure, assess the strength of their internal controls, and develop practical frameworks that protect against fraud, financial mismanagement, and regulatory non-compliance — before problems arise."
+      whatItIs="Risk advisory is the process of identifying, evaluating, and recommending measures to manage financial, operational, and compliance risks within an organisation. At Apex, we work with clients to understand their risk exposure, assess the strength of their internal controls, and develop practical frameworks that protect against fraud, financial mismanagement, and regulatory non-compliance, before problems arise."
       whoItIsFor={[
         "SMEs with limited internal audit capacity",
         "Growing businesses formalising their governance structures",
@@ -64,7 +64,7 @@ export default function RiskAdvisoryPage() {
           desc: "We support the client in implementing recommended controls and monitoring progress.",
         },
       ]}
-      whyApex="Prevention is always less costly than investigation. Apex's risk advisory services are designed to help businesses — especially SMEs — build the foundations that prevent fraud and financial loss from occurring in the first place. We translate complex risk management principles into practical, affordable actions that Ghanaian businesses can implement immediately. Our advice is independent, frank, and always focused on protecting your business."
+      whyApex="Prevention is always less costly than investigation. Apex's risk advisory services are designed to help businesses, especially SMEs, build the foundations that prevent fraud and financial loss from occurring in the first place. We translate complex risk management principles into practical, affordable actions that Ghanaian businesses can implement immediately. Our advice is independent, frank, and always focused on protecting your business."
     />
   );
 }

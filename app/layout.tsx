@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Apex Forensic & Financial Investigations Ltd — Ghana",
+    default: "Apex Forensic & Financial Investigations Ltd, Ghana",
     template: "%s | Apex Forensic Ghana",
   },
   description:

@@ -9,11 +9,11 @@
  * Keep these in sync with the `--color-apex-*` tokens in globals.css.
  */
 export const colors = {
-  navy: "#1B2A4A",
-  navyDark: "#111d33",
-  gold: "#B8922A",
-  goldLight: "#FDF6E3",
-  goldHover: "#9a7820",
+  navy: "#0B2A4A",
+  navyDark: "#07203A",
+  gold: "#D4AF37",
+  goldLight: "#F1D27A",
+  goldHover: "#B8962E",
   blueLight: "#EEF2F7",
   soft: "#F5F5F5",
   grey: "#555555",

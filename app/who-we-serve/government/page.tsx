@@ -15,7 +15,7 @@ export default function GovernmentPage() {
       title="Government Agencies"
       subtitle="Supporting public sector integrity, anti-corruption efforts, and financial accountability across Ghana's government institutions."
       icon={GovernmentIcon}
-      intro="Public sector financial integrity is fundamental to national development. Government agencies face unique challenges — public accountability, political sensitivity, complex procurement processes, and high-value fraud risks. Apex provides independent, professional forensic and financial investigation services that support government institutions in detecting misconduct, investigating irregularities, and strengthening the systems that protect public resources."
+      intro="Public sector financial integrity is fundamental to national development. Government agencies face unique challenges, public accountability, political sensitivity, complex procurement processes, and high-value fraud risks. Apex provides independent, professional forensic and financial investigation services that support government institutions in detecting misconduct, investigating irregularities, and strengthening the systems that protect public resources."
       challenges={[
         "Public fund misappropriation and procurement fraud",
         "Ghost employee payroll fraud in government institutions",

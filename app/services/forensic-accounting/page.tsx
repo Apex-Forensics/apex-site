@@ -15,7 +15,7 @@ export default function ForensicAccountingPage() {
       title="Forensic Accounting"
       intro="Uncovering the truth behind the numbers with independent, expert forensic accounting analysis and court-admissible reporting."
       icon={MagnifierIcon}
-      whatItIs="Forensic accounting is the application of accounting, auditing, and investigative skills to examine financial records in the context of actual or anticipated disputes or legal proceedings. At Apex, our forensic accountants go beyond the numbers — we tell the story behind them, identifying manipulation, misappropriation, and financial misconduct with precision and objectivity."
+      whatItIs="Forensic accounting is the application of accounting, auditing, and investigative skills to examine financial records in the context of actual or anticipated disputes or legal proceedings. At Apex, our forensic accountants go beyond the numbers, we tell the story behind them, identifying manipulation, misappropriation, and financial misconduct with precision and objectivity."
       whoItIsFor={[
         "SMEs suspecting internal financial fraud",
         "Corporations involved in commercial disputes",

@@ -15,7 +15,7 @@ export default function OrganizationsPage() {
       title="Organizations"
       subtitle="Ensuring transparency, accountability, and financial integrity for NGOs, corporates, and professional organisations."
       icon={PeopleIcon}
-      intro="Organisations of all types — from NGOs and donor-funded entities to corporates and professional associations — face financial integrity challenges that require independent, expert investigation. Whether it is donor fund misappropriation, corporate fraud, or governance failures, Apex provides the independent forensic and advisory services that organisations need to identify problems, address them professionally, and prevent recurrence."
+      intro="Organisations of all types, from NGOs and donor-funded entities to corporates and professional associations, face financial integrity challenges that require independent, expert investigation. Whether it is donor fund misappropriation, corporate fraud, or governance failures, Apex provides the independent forensic and advisory services that organisations need to identify problems, address them professionally, and prevent recurrence."
       challenges={[
         "Donor fund misappropriation in NGOs and funded entities",
         "Corporate fraud and financial misconduct by senior staff",

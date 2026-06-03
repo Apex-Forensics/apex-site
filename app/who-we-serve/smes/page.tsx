@@ -13,9 +13,9 @@ export default function SMEsPage() {
     <AudiencePage
       eyebrow="WHO WE SERVE"
       title="Small & Medium Enterprises"
-      subtitle="Protecting Ghanaian businesses from fraud, financial mismanagement, and cybercrime — at a price point built for SMEs."
+      subtitle="Protecting Ghanaian businesses from fraud, financial mismanagement, and cybercrime, at a price point built for SMEs."
       icon={StoreIcon}
-      intro="Ghana's SME sector is the backbone of the economy — and the most vulnerable to financial crime. Most SMEs don't have internal audit teams, forensic accountants, or cybersecurity specialists on staff. When fraud happens, they have nowhere to turn. Apex exists to change that. We bring enterprise-grade forensic and financial investigation capabilities to small and medium businesses across Ghana, at accessible prices and with a deep understanding of the local business environment."
+      intro="Ghana's SME sector is the backbone of the economy, and the most vulnerable to financial crime. Most SMEs don't have internal audit teams, forensic accountants, or cybersecurity specialists on staff. When fraud happens, they have nowhere to turn. Apex exists to change that. We bring enterprise-grade forensic and financial investigation capabilities to small and medium businesses across Ghana, at accessible prices and with a deep understanding of the local business environment."
       challenges={[
         "Internal theft and employee fraud with no investigation capacity",
         "MoMo fraud and digital payment scams targeting business accounts",

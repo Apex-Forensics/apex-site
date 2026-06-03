@@ -3,11 +3,11 @@
 /* ── Apex Brand Tokens ── */
 /* Keep these in sync with `lib/colors.ts` (the JS/TSX source of truth). */
 @theme inline {
-  --color-apex-navy: #1B2A4A;
-  --color-apex-navy-dark: #111d33;
-  --color-apex-gold: #B8922A;
-  --color-apex-gold-light: #FDF6E3;
-  --color-apex-gold-hover: #9a7820;
+  --color-apex-navy: #0B2A4A;
+  --color-apex-navy-dark: #07203A;
+  --color-apex-gold: #D4AF37;
+  --color-apex-gold-light: #F1D27A;
+  --color-apex-gold-hover: #B8962E;
   --color-apex-blue-light: #EEF2F7;
   --color-apex-soft: #F5F5F5;
   --color-apex-grey: #555555;
@@ -30,7 +30,7 @@ body {
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
-h1, h2, h3, h4, h5, h6 { color: #1B2A4A; line-height: 1.2; }
+h1, h2, h3, h4, h5, h6 { color: var(--color-apex-navy); line-height: 1.2; }
 
 /* ── Layout Utilities ── */
 .container-apex {
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 { color: #1B2A4A; line-height: 1.2; }
   min-width: 220px;
   background: white;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  border-top: 3px solid #B8922A;
+  border-top: 3px solid var(--color-apex-gold);
   z-index: 50;
 }
 .dropdown-parent:hover .dropdown-menu { display: block; }
@@ -114,14 +114,14 @@ h1, h2, h3, h4, h5, h6 { color: #1B2A4A; line-height: 1.2; }
   transition: color 0.2s ease, gap 0.2s ease;
 }
 .link-hover:hover {
-  color: #9a7820;
+  color: var(--color-apex-gold-hover);
 }
 
 .nav-link-hover {
   transition: color 0.2s ease, background 0.2s ease;
 }
 .nav-link-hover:hover {
-  color: #B8922A !important;
+  color: var(--color-apex-gold) !important;
   background: rgba(255,255,255,0.08);
   border-radius: 4px;
 }
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 { color: #1B2A4A; line-height: 1.2; }
 .resource-card-hover:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important;
-  border-color: #B8922A;
+  border-color: var(--color-apex-gold);
 }
 
 .stat-hover {
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 { color: #1B2A4A; line-height: 1.2; }
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .social-icon-hover:hover {
-  background: #B8922A !important;
+  background: var(--color-apex-gold) !important;
   transform: scale(1.1);
 }
 

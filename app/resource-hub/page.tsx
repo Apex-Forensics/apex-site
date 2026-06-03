@@ -10,7 +10,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Resource Hub",
   description:
-    "Free SME resources from Apex Forensic — fraud awareness guides, financial hygiene checklists, cybersecurity toolkits, and workshop materials.",
+    "Free SME resources from Apex Forensic, fraud awareness guides, financial hygiene checklists, cybersecurity toolkits, and workshop materials.",
 };
 
 const categories = [
@@ -26,7 +26,7 @@ const resources = [
     category: "fraud",
     categoryLabel: "Fraud Awareness",
     title: "Fraud Awareness Guide for SMEs",
-    desc: "Understand the most common fraud schemes affecting Ghanaian businesses — internal theft, MoMo fraud, supplier fraud, and forgery — and learn how to stop them.",
+    desc: "Understand the most common fraud schemes affecting Ghanaian businesses, internal theft, MoMo fraud, supplier fraud, and forgery, and learn how to stop them.",
     pages: "12 pages",
     format: "PDF",
     href: "#",
@@ -56,7 +56,7 @@ const resources = [
     category: "fraud",
     categoryLabel: "Fraud Awareness",
     title: "MoMo Fraud: What Every SME Needs to Know",
-    desc: "A focused guide on mobile money fraud — SIM swap attacks, fake payment confirmations, social engineering, and a 5-step response plan for affected businesses.",
+    desc: "A focused guide on mobile money fraud, SIM swap attacks, fake payment confirmations, social engineering, and a 5-step response plan for affected businesses.",
     pages: "6 pages",
     format: "PDF",
     href: "#",
@@ -66,7 +66,7 @@ const resources = [
     category: "finance",
     categoryLabel: "Financial Hygiene",
     title: "Bookkeeping Red Flags: A Guide for SME Owners",
-    desc: "Learn how to identify signs of financial manipulation or negligence in your own books — inflated expenses, unusual vendor activity, and payroll irregularities.",
+    desc: "Learn how to identify signs of financial manipulation or negligence in your own books, inflated expenses, unusual vendor activity, and payroll irregularities.",
     pages: "8 pages",
     format: "PDF",
     href: "#",
@@ -76,7 +76,7 @@ const resources = [
     category: "cyber",
     categoryLabel: "Cybersecurity",
     title: "Protecting Your Business Data",
-    desc: "A practical guide to Ghana's Data Protection Act obligations, securing customer data, and responding to a data breach — written for non-technical SME owners.",
+    desc: "A practical guide to Ghana's Data Protection Act obligations, securing customer data, and responding to a data breach, written for non-technical SME owners.",
     pages: "8 pages",
     format: "PDF",
     href: "#",
@@ -96,7 +96,7 @@ const resources = [
     category: "fraud",
     categoryLabel: "Fraud Awareness",
     title: "Fraud-Proof Your Business: 30-Day Action Plan",
-    desc: "A structured 30-day guide walking SME owners through weekly actions to strengthen fraud defences — from reviewing financial controls to implementing cybersecurity basics.",
+    desc: "A structured 30-day guide walking SME owners through weekly actions to strengthen fraud defences, from reviewing financial controls to implementing cybersecurity basics.",
     pages: "10 pages",
     format: "PDF",
     href: "#",
@@ -105,7 +105,7 @@ const resources = [
   {
     category: "workshop",
     categoryLabel: "Workshop & Training",
-    title: "SME Protection Workshop — Full Session",
+    title: "SME Protection Workshop, Full Session",
     desc: "Apex's flagship 2-hour SME protection workshop covering fraud awareness, cybersecurity basics, and financial hygiene. Facilitator deck, handout booklet, and assessment forms.",
     pages: "Full workshop pack",
     format: "Workshop",
@@ -157,7 +157,7 @@ export default function ResourceHubPage() {
                     flexDirection: "column",
                     justifyContent: "space-between",
                     height: "100%",
-                    border: `1px solid rgba(184,146,42,0.2)`,
+                    border: `1px solid rgba(212,175,55,0.2)`,
                   }}
                   className="card-hover"
                 >
@@ -165,7 +165,7 @@ export default function ResourceHubPage() {
                   <div>
                     <span
                       style={{
-                        background: "rgba(184,146,42,0.15)",
+                        background: "rgba(212,175,55,0.15)",
                         color: colors.gold,
                         fontSize: "11px",
                         fontWeight: "bold",
@@ -184,7 +184,7 @@ export default function ResourceHubPage() {
                       style={{
                         width: "48px",
                         height: "48px",
-                        background: "rgba(184,146,42,0.15)",
+                        background: "rgba(212,175,55,0.15)",
                         borderRadius: "8px",
                         display: "flex",
                         alignItems: "center",
@@ -374,7 +374,7 @@ export default function ResourceHubPage() {
             <div
               style={{
                 background: colors.goldLight,
-                border: `1px solid rgba(184,146,42,0.3)`,
+                border: `1px solid rgba(212,175,55,0.3)`,
                 borderRadius: "12px",
                 padding: "2.5rem",
                 maxWidth: "600px",

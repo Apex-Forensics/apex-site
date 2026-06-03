@@ -199,7 +199,7 @@ export default function AudiencePage({
                           width: "20px",
                           height: "20px",
                           borderRadius: "50%",
-                          background: "rgba(184,146,42,0.2)",
+                          background: "rgba(212,175,55,0.2)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",

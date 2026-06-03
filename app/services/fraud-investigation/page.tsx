@@ -15,7 +15,7 @@ export default function FraudInvestigationPage() {
       title="Fraud Investigation"
       intro="Professional, discreet, and thorough fraud investigations that uncover the facts and protect your organisation."
       icon={ShieldSearchIcon}
-      whatItIs="Fraud investigation is the systematic process of detecting, examining, and documenting fraudulent activity within an organisation or involving its stakeholders. At Apex, we conduct investigations with complete objectivity and confidentiality — gathering evidence, interviewing parties, and producing findings that support informed decisions and, where necessary, legal action."
+      whatItIs="Fraud investigation is the systematic process of detecting, examining, and documenting fraudulent activity within an organisation or involving its stakeholders. At Apex, we conduct investigations with complete objectivity and confidentiality, gathering evidence, interviewing parties, and producing findings that support informed decisions and, where necessary, legal action."
       whoItIsFor={[
         "SMEs experiencing unexplained financial losses",
         "Companies suspecting employee misconduct",
@@ -64,7 +64,7 @@ export default function FraudInvestigationPage() {
           desc: "We support the client through any subsequent disciplinary, legal, or regulatory processes.",
         },
       ]}
-      whyApex="Fraud investigations require a rare combination of financial expertise, investigative skill, and professional discretion. Apex brings all three. We operate independently, protect client confidentiality at every stage, and deliver findings that are factual, well-documented, and actionable. Our deep understanding of the Ghanaian business environment means we know where fraud hides — and how to find it."
+      whyApex="Fraud investigations require a rare combination of financial expertise, investigative skill, and professional discretion. Apex brings all three. We operate independently, protect client confidentiality at every stage, and deliver findings that are factual, well-documented, and actionable. Our deep understanding of the Ghanaian business environment means we know where fraud hides, and how to find it."
     />
   );
 }

@@ -26,6 +26,8 @@ const whoWeServe = [
     desc: "Protect your business from financial leaks and fraud.",
     href: "/who-we-serve/smes",
     color: colors.gold,
+    bg: "#FBF6EC",
+    iconBg: "#F4E9CB",
   },
   {
     icon: BankIcon,
@@ -33,20 +35,26 @@ const whoWeServe = [
     desc: "Strengthen controls and ensure financial integrity.",
     href: "/who-we-serve/institutions",
     color: colors.navy,
+    bg: "#EEF2F7",
+    iconBg: "#DCE5F0",
   },
   {
     icon: PeopleIcon,
     title: "Organizations",
     desc: "Ensure transparency, accountability and impact.",
     href: "/who-we-serve/organizations",
-    color: colors.gold,
+    color: "#2F7D55",
+    bg: "#EDF5EF",
+    iconBg: "#D7EADD",
   },
   {
     icon: GovernmentIcon,
     title: "Government",
     desc: "Support public sector integrity and anti-corruption efforts.",
     href: "/who-we-serve/government",
-    color: colors.navy,
+    color: "#A23A36",
+    bg: "#F8EDED",
+    iconBg: "#F0D9D9",
   },
 ];
 
@@ -83,18 +91,21 @@ const resources = [
     desc: "Understand common fraud schemes and how to stop them.",
     label: "Download Guide",
     href: "/resource-hub",
+    image: "/images/resources/guide.jpg",
   },
   {
     title: "Financial Hygiene Checklist",
     desc: "A simple checklist to strengthen your financial controls.",
     label: "Download Checklist",
     href: "/resource-hub",
+    image: "/images/resources/checklist.jpg",
   },
   {
     title: "Cybersecurity Toolkit",
     desc: "Basic cybersecurity steps every business should follow.",
     label: "Download Toolkit",
     href: "/resource-hub",
+    image: "/images/resources/toolkit.jpg",
   },
 ];
 
@@ -134,7 +145,7 @@ export default function HomePage() {
         <div style={{
   position: "absolute",
   inset: 0,
-  background: `linear-gradient(to right, ${colors.navy} 20%, rgba(27,42,74,0.11) 100%)`,
+  background: `linear-gradient(to right, ${colors.navy} 20%, rgba(11,42,74,0.11) 100%)`,
   zIndex: 1,
 }}
         />
@@ -281,7 +292,7 @@ export default function HomePage() {
                   <div
                     className="card-hover"
                     style={{
-                      background: colors.offWhite,
+                      background: item.bg,
                       border: `1px solid ${colors.border}`,
                       borderRadius: "8px",
                       padding: "2rem",
@@ -293,8 +304,7 @@ export default function HomePage() {
                         width: "56px",
                         height: "56px",
                         borderRadius: "50%",
-                        background:
-                          item.color === colors.gold ? colors.goldLight : colors.blueLight,
+                        background: item.iconBg,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -303,7 +313,7 @@ export default function HomePage() {
                     >
                       <Icon width={28} height={28} color={item.color} />
                     </div>
-                    <h3 style={{ fontSize: "17px", marginBottom: "0.75rem" }}>
+                    <h3 style={{ fontSize: "17px", marginBottom: "0.75rem", color: item.color }}>
                       {item.title}
                     </h3>
                     <p
@@ -474,20 +484,17 @@ export default function HomePage() {
                     alignItems: "flex-start",
                   }}
                 >
-                  <div
+                  <img
+                    src={res.image}
+                    alt={res.title}
                     style={{
-                      width: "52px",
-                      height: "52px",
-                      background: colors.goldLight,
+                      width: "92px",
+                      height: "110px",
+                      objectFit: "cover",
                       borderRadius: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
                       flexShrink: 0,
                     }}
-                  >
-                    <DownloadIcon width={24} height={24} color={colors.gold} />
-                  </div>
+                  />
                   <div>
                     <h3
                       style={{
@@ -631,7 +638,7 @@ export default function HomePage() {
               style={{
                 width: "56px",
                 height: "56px",
-                background: "rgba(184,146,42,0.15)",
+                background: "rgba(212,175,55,0.15)",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",

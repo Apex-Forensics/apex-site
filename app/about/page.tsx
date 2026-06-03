@@ -7,8 +7,7 @@ import { colors } from "@/lib/colors";
 import {
   ShieldLogo,
   ShieldSearchIcon,
-  MedalIcon,
-  LockIcon,
+  MagnifierIcon,
   UsersIcon,
   ArrowRight,
 } from "@/components/ui/icons";
@@ -16,13 +15,12 @@ import {
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Apex Forensic and Financial Investigations Limited — our mission, vision, values, and the team behind Ghana's technology-driven forensic firm.",
+    "Learn about Apex Forensic and Financial Investigations Limited, our mission, vision, values, and the team behind Ghana's technology-driven forensic firm.",
 };
 
 const values = [
   { icon: ShieldSearchIcon, title: "Integrity", desc: "We uphold the highest ethical standards in every engagement, ensuring our findings are honest, objective, and defensible." },
-  { icon: MedalIcon, title: "Accuracy", desc: "Our work is grounded in meticulous analysis and evidence-based conclusions. Precision is non-negotiable." },
-  { icon: LockIcon, title: "Confidentiality", desc: "Every client engagement is handled with absolute discretion. Your information never leaves our secure processes." },
+  { icon: MagnifierIcon, title: "Intelligence", desc: "We apply sharp analytical thinking and technology-driven insight to uncover the truth behind every investigation." },
   { icon: UsersIcon, title: "Accountability", desc: "We take full ownership of our work and stand behind every report, recommendation, and finding we deliver." },
 ];
 
@@ -69,7 +67,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="Who We Are"
         title="About Apex Forensic"
-        subtitle="We are Ghana's technology-driven forensic and financial investigations firm — built on integrity, powered by expertise, and committed to protecting what matters."
+        subtitle="We are Ghana's technology-driven forensic and financial investigations firm, built on integrity, powered by expertise, and committed to protecting what matters."
       />
 
       {/* ── MISSION & VISION ── */}
@@ -95,11 +93,11 @@ export default function AboutPage() {
             {[
               {
                 label: "Our Mission",
-                text: "To deliver independent, professional, and confidential forensic and financial investigation services that promote transparency, integrity, and accountability across Ghana and Africa — empowering businesses and institutions to detect fraud, prevent financial losses, and strengthen internal controls.",
+                text: "To deliver independent, professional, and confidential forensic and financial investigation services that promote transparency, integrity, and accountability across Ghana and Africa, empowering businesses and institutions to detect fraud, prevent financial losses, and strengthen internal controls.",
               },
               {
                 label: "Our Vision",
-                text: "To become Africa's most trusted technology-driven forensic and financial investigations firm — known for excellence, innovation, and an unwavering commitment to integrity in every engagement we undertake.",
+                text: "To become Africa's most trusted technology-driven forensic and financial investigations firm, known for excellence, innovation, and an unwavering commitment to integrity in every engagement we undertake.",
               },
             ].map((item) => (
               <div key={item.label} style={{ marginBottom: "2.5rem" }}>

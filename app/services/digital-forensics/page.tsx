@@ -15,7 +15,7 @@ export default function DigitalForensicsPage() {
       title="Digital Forensics"
       intro="Investigating digital fraud, cyber breaches, and data misuse with rigorous digital evidence collection and analysis."
       icon={ShieldLockIcon}
-      whatItIs="Digital forensics is the process of identifying, preserving, extracting, and documenting digital evidence from electronic devices, networks, and cloud systems for use in investigations and legal proceedings. At Apex, we apply forensically sound methodologies to recover and analyse digital evidence — helping clients understand what happened, who was responsible, and what evidence exists to support further action."
+      whatItIs="Digital forensics is the process of identifying, preserving, extracting, and documenting digital evidence from electronic devices, networks, and cloud systems for use in investigations and legal proceedings. At Apex, we apply forensically sound methodologies to recover and analyse digital evidence, helping clients understand what happened, who was responsible, and what evidence exists to support further action."
       whoItIsFor={[
         "Businesses experiencing data breaches or cyber incidents",
         "Companies investigating employee digital misconduct",
@@ -64,7 +64,7 @@ export default function DigitalForensicsPage() {
           desc: "We provide expert support through any legal, regulatory, or disciplinary proceedings.",
         },
       ]}
-      whyApex="Digital fraud and cybercrime are growing faster than most businesses can defend against. Apex brings together cybersecurity knowledge and forensic investigative discipline to respond effectively. We understand Ghana's digital landscape — from mobile money fraud to corporate data breaches — and we deliver digital forensic work that is methodical, well-documented, and built to withstand scrutiny."
+      whyApex="Digital fraud and cybercrime are growing faster than most businesses can defend against. Apex brings together cybersecurity knowledge and forensic investigative discipline to respond effectively. We understand Ghana's digital landscape, from mobile money fraud to corporate data breaches, and we deliver digital forensic work that is methodical, well-documented, and built to withstand scrutiny."
     />
   );
 }
