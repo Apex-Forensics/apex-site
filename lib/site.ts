@@ -9,11 +9,19 @@ export const site = {
   shortName: "Apex Forensic",
   tagline: "Integrity. Intelligence. Accountability.",
   contact: {
-    address: "East Legon, Accra, Ghana",
-    phone: "+233 59 114 2133",
+    address: "East Legon, Accra & Ho, Ghana",
+    phone: "+233 54 838 6660",
     email: "apex.forensic@outlook.com",
-    whatsapp: "https://wa.me/233591142133",
+    /** Local part of the WhatsApp number (digits only, no +). */
+    whatsappNumber: "233548386660",
+    /** Pre-built wa.me link, derived from `whatsappNumber`. */
+    whatsapp: "https://wa.me/233548386660",
   },
+  officeHours: [
+    { day: "Monday – Friday", hours: "8:00 AM – 5:00 PM" },
+    { day: "Saturday – Sunday", hours: "Closed" },
+  ],
+  // TODO: replace the `#` placeholders with the real profile URLs.
   socials: [
     { label: "LinkedIn", href: "#", icon: "linkedin" },
     { label: "Facebook", href: "#", icon: "facebook" },
@@ -40,8 +48,18 @@ export const nav: NavItem[] = [
       { label: "Government", href: "/who-we-serve/government" },
     ],
   },
-  { label: "Services", href: "/services" },
-  { label: "Resource Hub", href: "/resources" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "Forensic Accounting", href: "/services/forensic-accounting" },
+      { label: "Fraud Investigation", href: "/services/fraud-investigation" },
+      { label: "Financial Intelligence", href: "/services/financial-intelligence" },
+      { label: "Digital Forensics", href: "/services/digital-forensics" },
+      { label: "Risk Advisory", href: "/services/risk-advisory" },
+    ],
+  },
+  { label: "Resource Hub", href: "/resource-hub" },
   { label: "Insights", href: "/insights" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -53,7 +71,7 @@ export const hero = {
   description:
     "Helping SMEs, Institutions, Organizations, and Government detect fraud, prevent financial losses, and strengthen internal controls.",
   primaryCta: { label: "Get a Consultation", href: "/contact" },
-  secondaryCta: { label: "Download SME Guide", href: "/resources" },
+  secondaryCta: { label: "Download SME Guide", href: "/resource-hub" },
 };
 
 export type Audience = {
@@ -150,25 +168,25 @@ export const resources: {
 } = {
   heading: "Featured Resources",
   subheading: "Practical tools and guides to help you protect your business.",
-  cta: { label: "Explore All Resources", href: "/resources" },
+  cta: { label: "Explore All Resources", href: "/resource-hub" },
   items: [
     {
       title: "Fraud Awareness Guide for SMEs",
       description: "Understand common fraud schemes and how to stop them.",
       cta: "Download Guide",
-      href: "/resources",
+      href: "/resource-hub",
     },
     {
       title: "Financial Hygiene Checklist",
       description: "A simple checklist to strengthen your financial controls.",
       cta: "Download Checklist",
-      href: "/resources",
+      href: "/resource-hub",
     },
     {
       title: "Cybersecurity Toolkit",
       description: "Basic cybersecurity steps every business should follow.",
       cta: "Download Toolkit",
-      href: "/resources",
+      href: "/resource-hub",
     },
   ],
 };
@@ -198,7 +216,7 @@ export const footer = {
         { label: "Home", href: "/" },
         { label: "Who We Serve", href: "/who-we-serve" },
         { label: "Services", href: "/services" },
-        { label: "Resource Hub", href: "/resources" },
+        { label: "Resource Hub", href: "/resource-hub" },
         { label: "Insights", href: "/insights" },
         { label: "About Us", href: "/about" },
         { label: "Contact Us", href: "/contact" },
@@ -207,27 +225,27 @@ export const footer = {
     {
       heading: "Our Services",
       links: [
-        { label: "Forensic Accounting", href: "/services" },
-        { label: "Fraud Investigation", href: "/services" },
-        { label: "Financial Intelligence", href: "/services" },
-        { label: "Digital Forensics", href: "/services" },
-        { label: "Risk Advisory", href: "/services" },
-        { label: "Internal Control Review", href: "/services" },
+        { label: "Forensic Accounting", href: "/services/forensic-accounting" },
+        { label: "Fraud Investigation", href: "/services/fraud-investigation" },
+        { label: "Financial Intelligence", href: "/services/financial-intelligence" },
+        { label: "Digital Forensics", href: "/services/digital-forensics" },
+        { label: "Risk Advisory", href: "/services/risk-advisory" },
+        { label: "Internal Control Review", href: "/services/risk-advisory" },
       ],
     },
     {
       heading: "Resource Hub",
       links: [
-        { label: "Fraud Awareness", href: "/resources" },
-        { label: "Financial Hygiene", href: "/resources" },
-        { label: "Cybersecurity", href: "/resources" },
-        { label: "Workshops & Training", href: "/resources" },
-        { label: "Guides & Checklists", href: "/resources" },
+        { label: "Fraud Awareness", href: "/resource-hub" },
+        { label: "Financial Hygiene", href: "/resource-hub" },
+        { label: "Cybersecurity", href: "/resource-hub" },
+        { label: "Workshops & Training", href: "/resource-hub" },
+        { label: "Guides & Checklists", href: "/resource-hub" },
       ],
     },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ],
 };

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    default: "Apex Forensic & Financial Investigations Ltd, Ghana",
-    template: "%s | Apex Forensic Ghana",
+    default: `${site.name}, Ghana`,
+    template: `%s | ${site.shortName} Ghana`,
   },
   description:
     "Ghana's technology-driven forensic accounting and financial investigation firm. Helping SMEs, institutions, and government detect fraud, prevent financial losses, and strengthen internal controls.",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GH",
-    siteName: "Apex Forensic & Financial Investigations Ltd",
+    siteName: site.name,
   },
 };
 

@@ -1,51 +1,15 @@
 import Link from "next/link";
+import Logo from "@/components/layout/Logo";
+import SocialLinks from "@/components/ui/SocialLinks";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import { PinIcon, PhoneIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { colors } from "@/lib/colors";
-import {
-  PinIcon,
-  PhoneIcon,
-  MailIcon,
-  WhatsAppIcon,
-  socialPaths,
-} from "@/components/ui/icons";
-
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Who We Serve", href: "/who-we-serve" },
-  { label: "Services", href: "/services" },
-  { label: "Resource Hub", href: "/resource-hub" },
-  { label: "Insights", href: "/insights" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
-];
-
-const services = [
-  { label: "Forensic Accounting", href: "/services/forensic-accounting" },
-  { label: "Fraud Investigation", href: "/services/fraud-investigation" },
-  { label: "Financial Intelligence", href: "/services/financial-intelligence" },
-  { label: "Digital Forensics", href: "/services/digital-forensics" },
-  { label: "Risk Advisory", href: "/services/risk-advisory" },
-  { label: "Internal Control Review", href: "/services/risk-advisory" },
-];
-
-const resources = [
-  { label: "Fraud Awareness", href: "/resource-hub" },
-  { label: "Financial Hygiene", href: "/resource-hub" },
-  { label: "Cybersecurity", href: "/resource-hub" },
-  { label: "Workshops & Training", href: "/resource-hub" },
-  { label: "Guides & Checklists", href: "/resource-hub" },
-];
-
-const socials = [
-  { key: "linkedin", href: "#", label: "LinkedIn" },
-  { key: "facebook", href: "#", label: "Facebook" },
-  { key: "twitter", href: "#", label: "Twitter" },
-  { key: "youtube", href: "#", label: "YouTube" },
-];
+import { site, footer } from "@/lib/site";
 
 const contactDetails = [
-  { icon: <PinIcon width={16} height={16} />, text: "East Legon, Accra, Ghana" },
-  { icon: <PhoneIcon width={16} height={16} />, text: "+233 59 114 2133" },
-  { icon: <MailIcon width={16} height={16} />, text: "apex.forensic@outlook.com" },
+  { icon: <PinIcon width={16} height={16} />, text: site.contact.address },
+  { icon: <PhoneIcon width={16} height={16} />, text: site.contact.phone },
+  { icon: <MailIcon width={16} height={16} />, text: site.contact.email },
 ];
 
 export default function Footer() {
@@ -62,68 +26,26 @@ export default function Footer() {
 
             {/* Brand Column */}
             <div>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>
-                <div style={{
-                  width: "40px", height: "40px", borderRadius: "50%",
-                  background: colors.gold, display: "flex", alignItems: "center",
-                  justifyContent: "center", fontWeight: "bold", color: "white", fontSize: "16px",
-                }}>A</div>
-                <div>
-                  <div style={{ color: "white", fontWeight: "bold", fontSize: "13px" }}>APEX FORENSIC</div>
-                  <div style={{ color: colors.gold, fontSize: "10px" }}>& FINANCIAL INVESTIGATIONS</div>
-                </div>
+              <div style={{ marginBottom: "1rem" }}>
+                <Logo size={40} />
               </div>
 
               <p style={{ color: colors.muted, fontSize: "13px", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                Enhancing integrity, protecting value and building trust through professional forensic and financial investigation services.
+                {footer.blurb}
               </p>
 
-              {/* Social Icons */}
-              <div style={{ display: "flex", gap: "8px" }}>
-                {socials.map((s) => (
-  <a
-    key={s.key}
-    href={s.href}
-    aria-label={s.label}
-    className="social-icon-hover"
-    style={{
-      width: "32px", height: "32px", borderRadius: "50%",
-      background: "rgba(255,255,255,0.1)", display: "flex",
-      alignItems: "center", justifyContent: "center",
-      color: "white", textDecoration: "none",
-    }}
-  >
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-      <path d={socialPaths[s.key]} />
-    </svg>
-  </a>
+              <SocialLinks />
+            </div>
+
+            {/* Link Columns */}
+            {footer.columns.map((column) => (
+              <div key={column.heading}>
+                <h4 style={colHeader}>{column.heading}</h4>
+                {column.links.map((link) => (
+                  <Link key={link.label} href={link.href} style={footerLink}>{link.label}</Link>
                 ))}
               </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 style={colHeader}>Quick Links</h4>
-              {quickLinks.map(link => (
-                <Link key={link.label} href={link.href} style={footerLink}>{link.label}</Link>
-              ))}
-            </div>
-
-            {/* Services */}
-            <div>
-              <h4 style={colHeader}>Our Services</h4>
-              {services.map(link => (
-                <Link key={link.label} href={link.href} style={footerLink}>{link.label}</Link>
-              ))}
-            </div>
-
-            {/* Resource Hub */}
-            <div>
-              <h4 style={colHeader}>Resource Hub</h4>
-              {resources.map(link => (
-                <Link key={link.label} href={link.href} style={footerLink}>{link.label}</Link>
-              ))}
-            </div>
+            ))}
 
             {/* Contact */}
             <div>
@@ -135,20 +57,7 @@ export default function Footer() {
                 </div>
               ))}
 
-              <a
-                href="https://wa.me/233591142133"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex", alignItems: "center", gap: "8px",
-                  marginTop: "1rem", background: colors.whatsapp, color: "white",
-                  padding: "8px 16px", borderRadius: "4px",
-                  textDecoration: "none", fontSize: "13px", fontWeight: "bold",
-                }}
-              >
-                <WhatsAppIcon width={16} height={16} />
-                Chat on WhatsApp
-              </a>
+              <WhatsAppButton size="sm" style={{ marginTop: "1rem" }} />
             </div>
           </div>
 
@@ -163,11 +72,14 @@ export default function Footer() {
             gap: "1rem",
           }}>
             <p style={{ color: colors.muted, fontSize: "12px" }}>
-              © 2026 Apex Forensic & Financial Investigations Ltd. All Rights Reserved.
+              © {new Date().getFullYear()} {site.name}. All Rights Reserved.
             </p>
             <div style={{ display: "flex", gap: "1.5rem" }}>
-              <Link href="/privacy-policy" style={{ color: colors.muted, fontSize: "12px", textDecoration: "none" }}>Privacy Policy</Link>
-              <Link href="/terms-of-service" style={{ color: colors.muted, fontSize: "12px", textDecoration: "none" }}>Terms of Service</Link>
+              {footer.legal.map((link) => (
+                <Link key={link.href} href={link.href} style={{ color: colors.muted, fontSize: "12px", textDecoration: "none" }}>
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -175,7 +87,7 @@ export default function Footer() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/233591142133"
+        href={site.contact.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"

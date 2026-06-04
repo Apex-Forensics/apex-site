@@ -4,8 +4,10 @@ import CTABanner from "@/components/ui/CTABanner";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import ContactForm from "@/components/forms/ContactForm";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { ArrowRight, ShieldSearchIcon, MagnifierIcon, ChartIcon, ShieldLockIcon, ShieldLogo, CalendarIcon } from "@/components/ui/icons";
 import { colors } from "@/lib/colors";
+import { site } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -166,9 +168,9 @@ export default function ConsultationPage() {
                   gap: "0.75rem",
                 }}>
                   {[
-                    { label: "Phone", value: "+233 59 114 2133" },
-                    { label: "Email", value: "apex.forensic@outlook.com" },
-                    { label: "Location", value: "East Legon, Accra & Ho, Ghana" },
+                    { label: "Phone", value: site.contact.phone },
+                    { label: "Email", value: site.contact.email },
+                    { label: "Location", value: site.contact.address },
                   ].map((item) => (
                     <div key={item.label} style={{
                       display: "flex",
@@ -188,26 +190,8 @@ export default function ConsultationPage() {
                     </div>
                   ))}
                 </div>
-                
-                  < a href="https://wa.me/233591142133"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    marginTop: "1.25rem",
-                    background: "#25D366",
-                    color: colors.white,
-                    padding: "10px 20px",
-                    borderRadius: "4px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                    fontSize: "13px",
-                  }}
-                >
-                  Chat on WhatsApp
-                </a>
+
+                <WhatsAppButton size="sm" style={{ marginTop: "1.25rem" }} />
               </div>
             </div>
           </Reveal>

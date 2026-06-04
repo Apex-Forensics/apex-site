@@ -2,22 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Logo from "@/components/layout/Logo";
 import { colors } from "@/lib/colors";
-
-const whoWeServe = [
-  { label: "SMEs", href: "/who-we-serve/smes" },
-  { label: "Institutions", href: "/who-we-serve/institutions" },
-  { label: "Organizations", href: "/who-we-serve/organizations" },
-  { label: "Government", href: "/who-we-serve/government" },
-];
-
-const services = [
-  { label: "Forensic Accounting", href: "/services/forensic-accounting" },
-  { label: "Fraud Investigation", href: "/services/fraud-investigation" },
-  { label: "Financial Intelligence", href: "/services/financial-intelligence" },
-  { label: "Digital Forensics", href: "/services/digital-forensics" },
-  { label: "Risk Advisory", href: "/services/risk-advisory" },
-];
+import { nav } from "@/lib/site";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +17,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
@@ -39,45 +28,26 @@ export default function Navbar() {
     }}>
       <div className="container-apex" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
 
-        {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <div style={{ width: "42px", height: "42px", borderRadius: "50%", background: colors.gold, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", color: "white", fontSize: "16px" }}>A</div>
-          <div>
-            <div style={{ color: "white", fontWeight: "bold", fontSize: "15px", lineHeight: 1.1 }}>APEX FORENSIC</div>
-            <div style={{ color: colors.gold, fontSize: "11px", letterSpacing: "0.05em" }}>& FINANCIAL INVESTIGATIONS</div>
-          </div>
-        </Link>
+        <Logo />
 
         {/* Desktop Nav */}
         <nav style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-          <Link href="/" style={navLink} className="nav-link-hover">Home</Link>
-
-          <div style={{ position: "relative" }} className="dropdown-parent">
-            <button style={{ ...navLink, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }} className="nav-link-hover">
-              Who We Serve ▾
-            </button>
-            <div className="dropdown-menu">
-              {whoWeServe.map(item => (
-                <Link key={item.href} href={item.href} style={dropdownLink}>{item.label}</Link>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ position: "relative" }} className="dropdown-parent">
-            <button style={{ ...navLink, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }} className="nav-link-hover">
-              Services ▾
-            </button>
-            <div className="dropdown-menu">
-              {services.map(item => (
-                <Link key={item.href} href={item.href} style={dropdownLink}>{item.label}</Link>
-              ))}
-            </div>
-          </div>
-
-          <Link href="/resource-hub" style={navLink} className="nav-link-hover">Resource Hub</Link>
-          <Link href="/insights" style={navLink} className="nav-link-hover">Insights</Link>
-          <Link href="/about" style={navLink} className="nav-link-hover">About Us</Link>
-          <Link href="/contact" style={navLink} className="nav-link-hover">Contact</Link>
+          {nav.map((item) =>
+            item.children ? (
+              <div key={item.label} style={{ position: "relative" }} className="dropdown-parent">
+                <button style={{ ...navLink, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }} className="nav-link-hover">
+                  {item.label} ▾
+                </button>
+                <div className="dropdown-menu">
+                  {item.children.map((child) => (
+                    <Link key={child.href} href={child.href} style={dropdownLink}>{child.label}</Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={item.href} href={item.href} style={navLink} className="nav-link-hover">{item.label}</Link>
+            )
+          )}
         </nav>
 
         {/* CTA */}
@@ -98,37 +68,29 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={{ background: colors.navyDark, padding: "1rem 1.5rem 1.5rem" }}>
-          {[
-            { label: "Home", href: "/" },
-            { label: "Resource Hub", href: "/resource-hub" },
-            { label: "Insights", href: "/insights" },
-            { label: "About Us", href: "/about" },
-            { label: "Contact", href: "/contact" },
-          ].map(item => (
-            <Link key={item.href} href={item.href} style={mobileLink} onClick={() => setMenuOpen(false)}>{item.label}</Link>
-          ))}
-
-          {/* Mobile Who We Serve */}
-          <button onClick={() => setActiveDropdown(activeDropdown === "serve" ? null : "serve")} style={{ ...mobileLink, background: "none", border: "none", cursor: "pointer", width: "100%", textAlign: "left", display: "flex", justifyContent: "space-between" }}>
-            Who We Serve <span>{activeDropdown === "serve" ? "−" : "+"}</span>
-          </button>
-          {activeDropdown === "serve" && (
-            <div style={{ paddingLeft: "1rem", borderLeft: `2px solid ${colors.gold}` }}>
-              {whoWeServe.map(item => <Link key={item.href} href={item.href} style={mobileSubLink} onClick={() => setMenuOpen(false)}>{item.label}</Link>)}
-            </div>
+          {nav.map((item) =>
+            item.children ? (
+              <div key={item.label}>
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                  style={{ ...mobileLink, background: "none", border: "none", cursor: "pointer", width: "100%", textAlign: "left", display: "flex", justifyContent: "space-between" }}
+                >
+                  {item.label} <span>{activeDropdown === item.label ? "−" : "+"}</span>
+                </button>
+                {activeDropdown === item.label && (
+                  <div style={{ paddingLeft: "1rem", borderLeft: `2px solid ${colors.gold}` }}>
+                    {item.children.map((child) => (
+                      <Link key={child.href} href={child.href} style={mobileSubLink} onClick={closeMenu}>{child.label}</Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.href} href={item.href} style={mobileLink} onClick={closeMenu}>{item.label}</Link>
+            )
           )}
 
-          {/* Mobile Services */}
-          <button onClick={() => setActiveDropdown(activeDropdown === "services" ? null : "services")} style={{ ...mobileLink, background: "none", border: "none", cursor: "pointer", width: "100%", textAlign: "left", display: "flex", justifyContent: "space-between" }}>
-            Services <span>{activeDropdown === "services" ? "−" : "+"}</span>
-          </button>
-          {activeDropdown === "services" && (
-            <div style={{ paddingLeft: "1rem", borderLeft: `2px solid ${colors.gold}` }}>
-              {services.map(item => <Link key={item.href} href={item.href} style={mobileSubLink} onClick={() => setMenuOpen(false)}>{item.label}</Link>)}
-            </div>
-          )}
-
-          <Link href="/consultation" style={{ display: "block", background: colors.gold, color: "white", padding: "12px", borderRadius: "4px", textAlign: "center", textDecoration: "none", fontWeight: "bold", marginTop: "1rem" }} onClick={() => setMenuOpen(false)}>
+          <Link href="/consultation" style={{ display: "block", background: colors.gold, color: "white", padding: "12px", borderRadius: "4px", textAlign: "center", textDecoration: "none", fontWeight: "bold", marginTop: "1rem" }} onClick={closeMenu}>
             Get a Consultation
           </Link>
         </div>

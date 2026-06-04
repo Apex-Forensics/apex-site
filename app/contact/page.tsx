@@ -4,8 +4,10 @@ import CTABanner from "@/components/ui/CTABanner";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import ContactForm from "@/components/forms/ContactForm";
-import { PinIcon, PhoneIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import { PinIcon, PhoneIcon, MailIcon } from "@/components/ui/icons";
 import { colors } from "@/lib/colors";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -14,21 +16,9 @@ export const metadata: Metadata = {
 };
 
 const contactDetails = [
-  {
-    icon: PinIcon,
-    label: "Office",
-    value: "East Legon, Accra & Ho, Ghana",
-  },
-  {
-    icon: PhoneIcon,
-    label: "Phone",
-    value: "+233 59 114 2133 / +233 26 615 5507",
-  },
-  {
-    icon: MailIcon,
-    label: "Email",
-    value: "apex.forensic@outlook.com",
-  },
+  { icon: PinIcon, label: "Office", value: site.contact.address },
+  { icon: PhoneIcon, label: "Phone", value: site.contact.phone },
+  { icon: MailIcon, label: "Email", value: site.contact.email },
 ];
 
 export default function ContactPage() {
@@ -99,27 +89,7 @@ export default function ContactPage() {
                 );
               })}
 
-              
-               <a href="https://wa.me/233531721681"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  background: "#25D366",
-                  color: colors.white,
-                  padding: "12px 24px",
-                  borderRadius: "4px",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                  fontSize: "14px",
-                  marginTop: "0.5rem",
-                }}
-              >
-                <WhatsAppIcon width={18} height={18} />
-                Chat on WhatsApp
-              </a>
+              <WhatsAppButton style={{ marginTop: "0.5rem" }} />
 
               {/* Office hours */}
               <div style={{
@@ -139,10 +109,7 @@ export default function ContactPage() {
                 }}>
                   Office Hours
                 </h3>
-                {[
-                  { day: "Monday – Friday", hours: "8:00 AM – 5:00 PM" },
-                  { day: "Saturday - Sunday", hours: "Closed" },
-                ].map((item) => (
+                {site.officeHours.map((item) => (
                   <div key={item.day} style={{
                     display: "flex",
                     justifyContent: "space-between",
