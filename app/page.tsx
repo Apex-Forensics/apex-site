@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
-import { colors } from "@/lib/colors";
+import { colors, withAlpha } from "@/lib/colors";
 import {
   StoreIcon,
   BankIcon,
@@ -27,7 +27,7 @@ const whoWeServe = [
     href: "/who-we-serve/smes",
     color: colors.gold,
     bg: "#FDF6E0",
-    iconBg: "#FCE08A",
+    iconBg: "#FBDF9C",
   },
   {
     icon: BankIcon,
@@ -145,7 +145,7 @@ export default function HomePage() {
         <div style={{
   position: "absolute",
   inset: 0,
-  background: `linear-gradient(to right, rgba(7,32,58,0.9) 0%, rgba(11,42,74,0.5) 45%, rgba(11,42,74,0) 100%)`,
+  background: `linear-gradient(to right, ${withAlpha(colors.navyDark, 0.9)} 0%, ${withAlpha(colors.navy, 0.5)} 45%, ${withAlpha(colors.navy, 0)} 100%)`,
   zIndex: 1,
 }}
         />
@@ -652,7 +652,7 @@ export default function HomePage() {
               style={{
                 width: "56px",
                 height: "56px",
-                background: "rgba(212,175,55,0.15)",
+                background: withAlpha(colors.gold, 0.15),
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",

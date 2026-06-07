@@ -1,23 +1,10 @@
 @import "tailwindcss";
 
 /* ── Apex Brand Tokens ── */
-/* Keep these in sync with `lib/colors.ts` (the JS/TSX source of truth). */
+/* The brand color custom properties (--color-apex-*) are the single source of
+   truth defined in `lib/colors.ts` and injected at :root in `app/layout.tsx`.
+   Reference them below via var(--color-apex-*). Do not redefine colors here. */
 @theme inline {
-  --color-apex-navy: #0B2A4A;
-  --color-apex-navy-dark: #07203A;
-  --color-apex-gold: #D4AF37;
-  --color-apex-gold-light: #FCE08A;
-  --color-apex-gold-hover: #B8962E;
-  --color-apex-blue-light: #EEF2F7;
-  --color-apex-soft: #F5F5F5;
-  --color-apex-grey: #555555;
-  --color-apex-grey-dark: #444444;
-  --color-apex-dark: #1A1A1A;
-  --color-apex-off-white: #F9F9F9;
-  --color-apex-border: #EEEEEE;
-  --color-apex-border-light: #f0f0f0;
-  --color-apex-muted: #a0aec0;
-  --color-apex-whatsapp: #25D366;
   --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 

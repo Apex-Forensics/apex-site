@@ -4,7 +4,7 @@ import CTABanner from "@/components/ui/CTABanner";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import { DownloadIcon, ArrowRight } from "@/components/ui/icons";
-import { colors } from "@/lib/colors";
+import { colors, withAlpha } from "@/lib/colors";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -157,7 +157,7 @@ export default function ResourceHubPage() {
                     flexDirection: "column",
                     justifyContent: "space-between",
                     height: "100%",
-                    border: `1px solid rgba(212,175,55,0.2)`,
+                    border: `1px solid ${withAlpha(colors.gold, 0.2)}`,
                   }}
                   className="card-hover"
                 >
@@ -165,7 +165,7 @@ export default function ResourceHubPage() {
                   <div>
                     <span
                       style={{
-                        background: "rgba(212,175,55,0.15)",
+                        background: withAlpha(colors.gold, 0.15),
                         color: colors.gold,
                         fontSize: "11px",
                         fontWeight: "bold",
@@ -184,7 +184,7 @@ export default function ResourceHubPage() {
                       style={{
                         width: "48px",
                         height: "48px",
-                        background: "rgba(212,175,55,0.15)",
+                        background: withAlpha(colors.gold, 0.15),
                         borderRadius: "8px",
                         display: "flex",
                         alignItems: "center",
@@ -374,7 +374,7 @@ export default function ResourceHubPage() {
             <div
               style={{
                 background: colors.goldLight,
-                border: `1px solid rgba(212,175,55,0.3)`,
+                border: `1px solid ${withAlpha(colors.gold, 0.3)}`,
                 borderRadius: "12px",
                 padding: "2.5rem",
                 maxWidth: "600px",

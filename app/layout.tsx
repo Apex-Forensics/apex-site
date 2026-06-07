@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { site } from "@/lib/site";
+import { cssVars } from "@/lib/colors";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <style dangerouslySetInnerHTML={{ __html: cssVars }} />
         <Navbar />
         <main>{children}</main>
         <Footer />

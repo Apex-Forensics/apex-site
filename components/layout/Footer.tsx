@@ -27,7 +27,7 @@ export default function Footer() {
             {/* Brand Column */}
             <div>
               <div style={{ marginBottom: "1rem" }}>
-                <Logo size={40} />
+                <Logo size={72} />
               </div>
 
               <p style={{ color: colors.muted, fontSize: "13px", lineHeight: 1.7, marginBottom: "1.5rem" }}>

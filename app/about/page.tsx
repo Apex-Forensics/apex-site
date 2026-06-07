@@ -46,8 +46,8 @@ const team = [
   },
   {
     name: "Portia Mawuena Adeletey",
-    role: "Digital Technology & Content Specialist",
-    bio: "A frontend developer and content strategist with a background in fintech and a growing specialisation in GRC and cybersecurity. Leads Apex's digital presence and SME education initiatives.",
+    role: "Digital Forensics Officer",
+    bio: "A cybersecurity professional with a background in web development and a growing specialisation in DFIR (Digital Forensic Investigation and Response). Leads Apex's digital presence and SME education initiatives.",
     initials: "PA",
   },
 ];

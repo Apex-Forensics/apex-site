@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import HighlightList from "@/components/ui/HighlightList";
 import Reveal from "@/components/ui/Reveal";
 import { ArrowRight } from "@/components/ui/icons";
-import { colors } from "@/lib/colors";
+import { colors, withAlpha } from "@/lib/colors";
 import Link from "next/link";
 
 type IconProps = SVGProps<SVGSVGElement>;
@@ -199,7 +199,7 @@ export default function AudiencePage({
                           width: "20px",
                           height: "20px",
                           borderRadius: "50%",
-                          background: "rgba(212,175,55,0.2)",
+                          background: withAlpha(colors.gold, 0.2),
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",

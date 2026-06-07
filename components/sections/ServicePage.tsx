@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import ProcessSteps from "@/components/ui/ProcessSteps";
 import Reveal from "@/components/ui/Reveal";
 import { ArrowRight } from "@/components/ui/icons";
-import { colors } from "@/lib/colors";
+import { colors, withAlpha } from "@/lib/colors";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
@@ -223,7 +223,7 @@ export default function ServicePage({
                           width: "20px",
                           height: "20px",
                           borderRadius: "50%",
-                          background: "rgba(212,175,55,0.2)",
+                          background: withAlpha(colors.gold, 0.2),
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",

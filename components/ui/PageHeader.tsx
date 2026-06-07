@@ -1,4 +1,4 @@
-import { colors } from "@/lib/colors";
+import { colors, withAlpha } from "@/lib/colors";
 
 type PageHeaderProps = {
   eyebrow?: string;
@@ -32,7 +32,7 @@ export default function PageHeader({ eyebrow, title, subtitle, icon }: PageHeade
             width: "72px",
             height: "72px",
             borderRadius: "50%",
-            background: "rgba(212,175,55,0.15)",
+            background: withAlpha(colors.gold, 0.15),
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
