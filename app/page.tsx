@@ -26,8 +26,8 @@ const whoWeServe = [
     desc: "Protect your business from financial leaks and fraud.",
     href: "/who-we-serve/smes",
     color: colors.gold,
-    bg: "#FBF6EC",
-    iconBg: "#F4E9CB",
+    bg: "#FDF6E0",
+    iconBg: "#FCE08A",
   },
   {
     icon: BankIcon,
@@ -138,14 +138,14 @@ export default function HomePage() {
         backgroundImage: "url('/images/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center right",
-        opacity: 0.5,
+        opacity: 0.85,
         zIndex: 0,
       }} /> 
         {/* Dark overlay for text readability */}
         <div style={{
   position: "absolute",
   inset: 0,
-  background: `linear-gradient(to right, ${colors.navy} 20%, rgba(11,42,74,0.11) 100%)`,
+  background: `linear-gradient(to right, rgba(7,32,58,0.9) 0%, rgba(11,42,74,0.5) 45%, rgba(11,42,74,0) 100%)`,
   zIndex: 1,
 }}
         />
@@ -566,52 +566,42 @@ export default function HomePage() {
         }}
       >
         <div className="container-apex">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-              gap: "2rem",
-              textAlign: "center",
-            }}
-          >
+          <div className="stats-row">
             {stats.map((stat, i) => {
               const Icon = stat.icon;
               return (
                 <Reveal key={i} delay={i * 0.1}>
-                  <div className="stat-hover" style={{ padding: "1rem" }}>
-                    <div
-                      style={{
-                        width: "48px",
-                        height: "48px",
-                        borderRadius: "50%",
-                        background: colors.goldLight,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        margin: "0 auto 0.75rem",
-                      }}
-                    >
-                      <Icon width={24} height={24} color={colors.gold} />
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "2.2rem",
-                        fontWeight: "bold",
-                        color: colors.gold,
-                        lineHeight: 1,
-                      }}
-                    >
-                      {stat.value}
-                    </div>
-                    <div
-                      style={{
-                        color: colors.grey,
-                        fontSize: "13px",
-                        marginTop: "0.5rem",
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {stat.label}
+                  <div
+                    className="stat-hover"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1rem",
+                      padding: "0.5rem 0",
+                    }}
+                  >
+                    <Icon width={48} height={48} color={colors.gold} />
+                    <div>
+                      <div
+                        style={{
+                          fontSize: "2rem",
+                          fontWeight: "bold",
+                          color: colors.navy,
+                          lineHeight: 1,
+                        }}
+                      >
+                        {stat.value}
+                      </div>
+                      <div
+                        style={{
+                          color: colors.grey,
+                          fontSize: "13px",
+                          marginTop: "0.4rem",
+                          lineHeight: 1.4,
+                        }}
+                      >
+                        {stat.label}
+                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -619,6 +609,30 @@ export default function HomePage() {
             })}
           </div>
         </div>
+
+        <style>{`
+          .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+          }
+          .stats-row > * {
+            display: flex;
+            justify-content: center;
+            padding: 0 2rem;
+          }
+          .stats-row > * + * {
+            border-left: 1px solid ${colors.border};
+          }
+          @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            .stats-row > *:nth-child(3) { border-left: none; }
+          }
+          @media (max-width: 480px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .stats-row > * + * { border-left: none; }
+          }
+        `}</style>
       </section>
 
       {/* ── CTA BANNER ── */}

@@ -12,7 +12,7 @@ export const colors = {
   navy: "#0B2A4A",
   navyDark: "#07203A",
   gold: "#D4AF37",
-  goldLight: "#F1D27A",
+  goldLight: "#FCE08A",
   goldHover: "#B8962E",
   blueLight: "#EEF2F7",
   soft: "#F5F5F5",
